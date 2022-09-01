@@ -10,7 +10,7 @@ let obtenerPcias= async ()=>{
     return consulta;
 }
 // Función que retorna los datos de departamentos
-async function obtenerDptos() {
+let obtenerDptos=async()=>{
     await retrasar(1391);
 
     const consulta = await fetch('https://apis.datos.gob.ar/georef/api/departamentos?campos=completo&max=1000')
@@ -20,7 +20,7 @@ async function obtenerDptos() {
 }
 
 // Función que retorna los datos de localidades
-async function obtenerLocalidades() {
+let obtenerLocalidades=async()=>{
       await retrasar(900);
 
     const consulta = await fetch('https://apis.datos.gob.ar/georef/api/localidades?campos=completo&max=4200')
