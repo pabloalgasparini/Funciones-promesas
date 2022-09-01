@@ -6,17 +6,16 @@ let obtenerPcias= async ()=>{
 
      const consulta =await fetch('https://apis.datos.gob.ar/georef/api/provincias')
     .then(respuesta=>respuesta.json())
-    .then(datos=>datos);
+    .then(datos=>console.log(datos.provincias));
     return consulta;
 }
-obtenerPcias();
 // Función que retorna los datos de departamentos
 async function obtenerDptos() {
     await retrasar(1391);
 
     const consulta = await fetch('https://apis.datos.gob.ar/georef/api/departamentos')
     .then(respuesta=>respuesta.json())
-    .then(datos=>datos);
+    .then(datos=>console.log(datos.departamentos));
     return consulta;
 }
 
@@ -26,7 +25,7 @@ async function obtenerLocalidades() {
 
     const consulta = await fetch('https://apis.datos.gob.ar/georef/api/localidades')
     .then(respuesta=>respuesta.json())
-    .then(datos=>datos);
+    .then(datos=>console.log(datos.localidades));
     return consulta;
 }
 // Funcion para obtener todos los datos
